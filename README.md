@@ -6,9 +6,6 @@
 [![Ollama](https://img.shields.io/badge/Ollama-llama3.1-orange.svg)](https://ollama.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p align="center">
-  <img src="docs/images/nexus-logo.png" alt="NEXUS Logo" width="200"/>
-</p>
 
 ---
 
