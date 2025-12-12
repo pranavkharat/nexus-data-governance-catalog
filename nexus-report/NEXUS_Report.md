@@ -1,9 +1,5 @@
 ---
-title: "NEXUS: Knowledge Graph-Driven Data Catalog with Unified LLM GraphRAG"
-subtitle: "Comprehensive System Architecture and Implementation Report"
-author: "Pranav Kharat, Venkat Akash Varun Pemmaraju, Shreeanant Bharadwaj"
-date: "December 11, 2025"
-# DISABLE AUTOMATIC TOC TO PREVENT DUPLICATES
+# No title/subtitle/author/date here so Pandoc does NOT create its own title page
 toc: false
 numbersections: true
 geometry: margin=1in
@@ -55,29 +51,18 @@ header-includes:
 {\large Venkat Akash Varun Pemmaraju}\\[0.1cm]
 {\large Shreeanant Bharadwaj}
 
-\vspace{1.5cm}
-
 {\large \textbf{Fall 2025}}\\[0.5cm]
-{\large December 11, 2025}
 
 \vfill
 
 \end{titlepage}
-\newpage
 
-% FRONT MATTER
-\pagenumbering{roman} % Start Roman numerals (i, ii, iii)
 
 \tableofcontents
 \newpage
 
 \listoffigures
-\newpage
 
-\listoftables
-\newpage
-
-\pagenumbering{arabic} % Switch to standard numbers (1, 2, 3)
 
 \newpage
 
