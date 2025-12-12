@@ -1655,9 +1655,11 @@ with gr.Blocks(css=custom_css, title="NEXUS GraphRAG", theme=theme) as demo:
                 <h1 style="margin: 0; font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NEXUS GraphRAG</h1>
                 <p style="margin: 12px 0 0; color: #a0a0b0; font-size: 18px;">Knowledge Graph Data Catalog with Unified LLM Integration</p>
                 <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-                    <span style="background: rgba(16,185,129,0.2); color: #6ee7b7; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ 60% Accuracy</span>
-                    <span style="background: rgba(99,102,241,0.2); color: #a5b4fc; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ 100% Intent Routing</span>
+                    <span style="background: rgba(16,185,129,0.2); color: #6ee7b7; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ 60-70% Accuracy</span>
+                    <span style="background: rgba(99,102,241,0.2); color: #a5b4fc; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ Unified System</span>
                     <span style="background: rgba(139,92,246,0.2); color: #c4b5fd; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ 100% Lineage F1</span>
+                    <span style="background: rgba(139,92,246,0.2); color: #c4b5fd; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 500;">✓ SHACL-Inspired Governance </span>
+
                 </div>
                 <p style="margin: 20px 0 0; color: #606070; font-size: 14px;">🎓 Pranav Kharat • Northeastern University • MS Project 2025</p>
             </div>
@@ -1673,7 +1675,7 @@ with gr.Blocks(css=custom_css, title="NEXUS GraphRAG", theme=theme) as demo:
                     unified_input = gr.Textbox(label="Your Question", placeholder="Try: 'Which tables contain customer data?' or 'How many customers from São Paulo?'", lines=2)
                 with gr.Column(scale=1):
                     unified_btn = gr.Button("🔍 Search", variant="primary", size="lg")
-            gr.Examples(examples=[["Which tables contain customer data?"], ["Show duplicate tables"], ["How many customers from São Paulo?"], ["Tables with >100k rows?"], ["What does CLIENT_DATA derive from?"]], inputs=unified_input)
+            gr.Examples(examples=[["Which tables contain customer data?"], ["What columns are in sales_transactions?"], ["How many customers from São Paulo?"], ["Tables with >100k rows?"], ["What does CLIENT_DATA derive from?"]], inputs=unified_input)
             unified_output = gr.HTML()
             unified_btn.click(query_unified, inputs=unified_input, outputs=unified_output)
             unified_input.submit(query_unified, inputs=unified_input, outputs=unified_output)
