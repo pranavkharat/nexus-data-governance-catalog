@@ -1,0 +1,39 @@
+{
+  "table_name": "media_customer_reviews",
+  "full_name": "samples.bakehouse.media_customer_reviews",
+  "table_type": "TableType.MANAGED",
+  "data_source_format": "DataSourceFormat.DELTA",
+  "storage_location": "s3://system-tables-prod-us-east-2-uc-metastore-bucket/metastore/b622f329-0f39-444f-9dbb-5733ba3e2021/tables/c4835ddc-b80f-4a9f-ba27-a62cea51c938",
+  "owner": "System user",
+  "comment": "The **Bakehouse Dataset** simulates a bakery franchise business and contains several key datasets for various analytical and AI-driven use cases. Please note that this sample dataset has been synthetically curated and is suitable for any Databricks workload.\n\nSample use cases for this dataset include:\n\n* **Building Data Pipelines with Delta Live Tables**: Create automated, real-time data pipelines for efficient data ingestion, transformation, and management.\n* **Performing Analytics with Databricks SQL**: Conduct powerful SQL-based analytics to uncover actionable insights from structured data, including sales trends and customer behavior.\n* **Exploring AI and Machine Learning Capabilities**: Use the dataset to develop and train machine learning models, applying AI to forecast trends, optimize operations, and predict customer preferences.",
+  "columns": [
+    {
+      "name": "review",
+      "type": "ColumnTypeName.STRING",
+      "nullable": true,
+      "comment": null,
+      "position": 0
+    },
+    {
+      "name": "franchiseID",
+      "type": "ColumnTypeName.LONG",
+      "nullable": true,
+      "comment": null,
+      "position": 1
+    },
+    {
+      "name": "review_date",
+      "type": "ColumnTypeName.TIMESTAMP",
+      "nullable": true,
+      "comment": null,
+      "position": 2
+    },
+    {
+      "name": "new_id",
+      "type": "ColumnTypeName.INT",
+      "nullable": true,
+      "comment": null,
+      "position": 3
+    }
+  ]
+}
