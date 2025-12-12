@@ -1,0 +1,110 @@
+@inproceedings{santos2023,
+  author    = {Khatiwada, Aamod and Fan, Grace and Shraga, Roee and Chen, Zixuan and Gatterbauer, Wolfgang and Miller, Ren{\'e}e J. and Cafarella, Michael},
+  title     = {SANTOS: Relationship-based Semantic Table Union Search},
+  booktitle = {Proceedings of the 2023 ACM SIGMOD International Conference on Management of Data},
+  year      = {2023},
+  pages     = {1--25},
+  publisher = {ACM},
+  doi       = {10.1145/3588689}
+}
+
+@article{graphrag2024,
+  author    = {Edge, Darren and Trinh, Ha and Cheng, Newman and Bradley, Joshua and Chao, Alex and Mody, Apurva and Truitt, Steven and Larson, Jonathan},
+  title     = {From Local to Global: A Graph RAG Approach to Query-Focused Summarization},
+  journal   = {arXiv preprint arXiv:2404.16130},
+  year      = {2024},
+  publisher = {Microsoft Research}
+}
+
+@inproceedings{xgboost2016,
+  author    = {Chen, Tianqi and Guestrin, Carlos},
+  title     = {XGBoost: A Scalable Tree Boosting System},
+  booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  year      = {2016},
+  pages     = {785--794},
+  publisher = {ACM},
+  doi       = {10.1145/2939672.2939785}
+}
+
+@inproceedings{goods2016,
+  author    = {Halevy, Alon and Korn, Flip and Noy, Natalya F. and Olston, Christopher and Polyzotis, Neoklis and Roy, Sudip and Whang, Steven Euijong},
+  title     = {Goods: Organizing Google's Datasets},
+  booktitle = {Proceedings of the 2016 ACM SIGMOD International Conference on Management of Data},
+  year      = {2016},
+  pages     = {795--806},
+  publisher = {ACM},
+  doi       = {10.1145/2882903.2903730}
+}
+
+@article{valentine2021,
+  author    = {Koutras, Christos and Siachamis, George and Ionescu, Andra and Psarakis, Kyriakos and Brons, Jerry and"; Schelter, Sebastian and Fragkoulis, Marios and Katsifodimos, Asterios},
+  title     = {Valentine: Evaluating Matching Techniques for Dataset Discovery},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {14},
+  number    = {11},
+  year      = {2021},
+  pages     = {2871--2884},
+  doi       = {10.14778/3476249.3476300}
+}
+
+@inproceedings{rag2020,
+  author    = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt{\"a}schel, Tim and Riedel, Sebastian and Kiela, Douwe},
+  title     = {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {33},
+  year      = {2020},
+  pages     = {9459--9474},
+  publisher = {NeurIPS}
+}
+
+@techreport{shacl2017,
+  author      = {Knublauch, Holger and Kontokostas, Dimitris},
+  title       = {Shapes Constraint Language (SHACL)},
+  institution = {W3C},
+  year        = {2017},
+  type        = {W3C Recommendation},
+  url         = {https://www.w3.org/TR/shacl/}
+}
+
+@misc{neo4j,
+  author       = {{Neo4j, Inc.}},
+  title        = {Neo4j Graph Database Documentation},
+  howpublished = {\url{https://neo4j.com/docs/}},
+  year         = {2024}
+}
+
+@misc{milvus,
+  author       = {{Zilliz}},
+  title        = {Milvus: A Purpose-Built Vector Database},
+  howpublished = {\url{https://milvus.io/docs}},
+  year         = {2024}
+}
+
+@misc{ollama,
+  author       = {{Ollama}},
+  title        = {Get up and running with large language models locally},
+  howpublished = {\url{https://ollama.ai/}},
+  year         = {2024}
+}
+
+@misc{olist,
+  author       = {{Olist}},
+  title        = {Brazilian E-Commerce Public Dataset by Olist},
+  howpublished = {\url{https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce}},
+  year         = {2018}
+}
+
+@misc{langchain,
+  author       = {Chase, Harrison},
+  title        = {LangChain: Building applications with LLMs through composability},
+  howpublished = {\url{https://langchain.com/}},
+  year         = {2024}
+}
+
+@inproceedings{sentence-transformers,
+  author    = {Reimers, Nils and Gurevych, Iryna},
+  title     = {Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2019},
+  publisher = {ACL}
+}

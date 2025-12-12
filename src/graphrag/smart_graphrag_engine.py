@@ -69,25 +69,14 @@ class SmartGraphRAGEngine:
             raise ConnectionError(f"Failed to connect to Neo4j: {e}")
         
         # Configuration
-        self.semantic_weight = 0.7
-        self.structural_weight = 0.3
+        self.semantic_weight = 0.8
+        self.structural_weight = 0.2
         
         print(f"✅ Smart GraphRAG initialized (weights: {self.semantic_weight}/{self.structural_weight})")
     
     def classify_query_type(self, question: str) -> str:
         """
         Classify question into query types.
-        UPDATED: Now includes Databricks-specific types.
-        
-        Returns one of:
-            'sensitivity_query' - PII/sensitivity questions
-            'cross_source' - Cross-platform similarity
-            'databricks_discovery' - Databricks-specific metadata
-            'duplicate_detection' - Duplicate/copy detection
-            'lineage_query' - Data lineage
-            'relationship_traversal' - FK connections
-            'metadata_filter' - Size/schema queries
-            'semantic_discovery' - Default semantic search
         """
         q_lower = question.lower()
         
@@ -391,7 +380,7 @@ class SmartGraphRAGEngine:
             return [dict(record) for record in result]
     
     # ================================================
-    # EXISTING HANDLERS (unchanged, abbreviated)
+    # EXISTING HANDLERS
     # ================================================
     
     def _metadata_filter_query(self, question: str, top_k: int) -> List[Dict]:
@@ -478,7 +467,7 @@ class SmartGraphRAGEngine:
     def _relationship_query(self, question: str, top_k: int) -> List[Dict]:
         """Handle relationship traversal queries."""
         print("🔗 Handler: Relationship Traversal")
-        # ... (keep existing implementation)
+        # Placeholder for deeper relationship traversal logic if needed
         return []
     
     def _lineage_query(self, question: str, top_k: int) -> List[Dict]:
@@ -504,7 +493,7 @@ class SmartGraphRAGEngine:
         """Handle semantic discovery with hybrid ranking."""
         print("🔍 Handler: Hybrid GraphRAG (Semantic + Structural)")
         
-        # Semantic search via Milvus (now includes Databricks)
+        # Semantic search via Milvus
         semantic_results = self._semantic_search(question, top_k=10)
         
         # Enrich with graph context
@@ -536,14 +525,20 @@ class SmartGraphRAGEngine:
         return results[0]
     
     def _get_graph_context(self, semantic_results) -> Dict:
-        """Get graph context for semantic results (now handles both sources)."""
+        """Get graph context for semantic results."""
         table_names = []
         sources = []
         
         for hit in semantic_results:
-            text = hit.entity.get('text', '')
-            source = hit.entity.get('source', 'snowflake')
-            table_name = hit.entity.get('table_name', '')
+            # FIX applied here: Remove second argument to .get()
+            text = hit.entity.get('text')
+            source = hit.entity.get('source')
+            table_name = hit.entity.get('table_name')
+            
+            # Handle defaults manually
+            if text is None: text = ''
+            if source is None: source = 'snowflake'
+            if table_name is None: table_name = ''
             
             if not table_name:
                 # Fallback: parse from text
@@ -591,9 +586,15 @@ class SmartGraphRAGEngine:
         max_centrality = 6
         
         for hit in semantic_results:
-            text = hit.entity.get('text', '')
-            source = hit.entity.get('source', 'snowflake')
-            table_name = hit.entity.get('table_name', '')
+            # FIX applied here: Remove second argument to .get()
+            text = hit.entity.get('text')
+            source = hit.entity.get('source')
+            table_name = hit.entity.get('table_name')
+            
+            # Handle defaults manually
+            if text is None: text = ''
+            if source is None: source = 'snowflake'
+            if table_name is None: table_name = ''
             
             if not table_name:
                 table_part = text.split(' (')[0]
